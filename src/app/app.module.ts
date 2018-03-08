@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ThemeComponent } from './theme/theme.component';
 import { LayoutModule } from './theme/layouts/layout.module';
+import { UserModule } from './user/user.module';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,22 +19,40 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { UserComponent } from './user/user.component';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
     declarations: [
         ThemeComponent,
         AppComponent,
-        UserComponent,
     ],
     imports: [
         LayoutModule,
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
+        UserModule,
+
         ThemeRoutingModule,
         AuthModule,
         StoreModule.forRoot(reducers, { metaReducers }),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
         EffectsModule.forRoot([AppEffects]),
+
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
     ],
     providers: [ScriptLoaderService],
     bootstrap: [AppComponent]

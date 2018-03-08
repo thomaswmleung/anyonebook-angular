@@ -3,7 +3,7 @@ import { Actions, Effect } from '@ngrx/effects';
 
 
 @Injectable()
-export class AppEffects {
+export class UserEffects {
 
     constructor(private actions$: Actions) { }
 }

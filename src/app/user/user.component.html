@@ -1,0 +1,10 @@
+<div style="cursor:pointer;user-select: none;">If life is a game here is the rule</div>
+
+<div class="btn" (click)="translate.use('en')" >English</div>
+<div class="btn" (click)="translate.use('fr')">France</div>
+<div>
+    <p>{{ 'HOME.TITLE' | translate }}</p>
+    <pre>1. {{translate.getDefaultLang()|json}}</pre>
+    <p>2. {{translate.getLangs()|json}}</p>
+    <p>4. {{translate.getBrowserLang()}}</p>
+</div>

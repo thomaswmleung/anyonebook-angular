@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpModule, Http } from '@angular/http'
 import { DefaultComponent } from '../pages/default/default.component';
 import { AsideNavComponent } from './aside-nav/aside-nav.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
@@ -39,6 +40,7 @@ import { UnwrapTagDirective } from '../../_directives/unwrap-tag.directive';
     imports: [
         CommonModule,
         RouterModule,
+        HttpModule
     ]
 })
 export class LayoutModule {

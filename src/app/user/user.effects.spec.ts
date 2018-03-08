@@ -2,21 +2,21 @@ import { TestBed, inject } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs/Observable';
 
-import { AppEffects } from './app.effects';
+import { UserEffects } from './user.effects';
 
-describe('AppService', () => {
+describe('UserService', () => {
     let actions$: Observable<any>;
-    let effects: AppEffects;
+    let effects: UserEffects;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [
-                AppEffects,
+                UserEffects,
                 provideMockActions(() => actions$)
             ]
         });
 
-        effects = TestBed.get(AppEffects);
+        effects = TestBed.get(UserEffects);
     });
 
     it('should be created', () => {
