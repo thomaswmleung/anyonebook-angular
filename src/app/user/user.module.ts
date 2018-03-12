@@ -7,15 +7,18 @@ import { UserEffects } from './user.effects';
 
 import { UserComponent } from './user.component'
 import { TranslateModule } from '@ngx-translate/core';
+import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
+
 
 @NgModule({
     imports: [
         CommonModule,
         StoreModule.forFeature('user', fromUser.reducer),
         EffectsModule.forFeature([UserEffects]),
-        TranslateModule.forChild()
+        TranslateModule.forChild(),
+        ImageViewerModule
     ],
-    exports: [UserComponent, TranslateModule],
+    exports: [UserComponent, TranslateModule,ImageViewerModule],
     declarations: [UserComponent],
     entryComponents: [UserComponent],
 })
