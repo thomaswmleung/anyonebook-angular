@@ -7,7 +7,7 @@ import { UserEffects } from './user.effects';
 
 import { UserComponent } from './user.component'
 import { TranslateModule } from '@ngx-translate/core';
-import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
+import { ImageViewerModule } from '../../../imageviewer';
 
 
 @NgModule({

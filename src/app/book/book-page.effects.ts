@@ -5,5 +5,5 @@ import { Actions, Effect } from '@ngrx/effects';
 @Injectable()
 export class BookPageEffects {
 
-  constructor(private actions$: Actions) {}
+    constructor(private actions$: Actions) { }
 }

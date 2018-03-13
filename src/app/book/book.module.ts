@@ -8,12 +8,12 @@ import { BookPageEffects } from './book-page.effects';
 import { BookEffects } from './book.effects';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    StoreModule.forFeature('book', fromBook.reducer),
-    StoreModule.forFeature('bookPage', fromBookPage.reducer),
-    EffectsModule.forFeature([BookPageEffects, BookEffects])
-  ],
-  declarations: []
+    imports: [
+        CommonModule,
+        StoreModule.forFeature('book', fromBook.reducer),
+        StoreModule.forFeature('bookPage', fromBookPage.reducer),
+        EffectsModule.forFeature([BookPageEffects, BookEffects])
+    ],
+    declarations: []
 })
 export class BookModule { }

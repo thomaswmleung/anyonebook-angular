@@ -1,4 +1,4 @@
 export interface BookPage {
-  id: any;
-  changes:any; 
+    id: any;
+    changes: any;
 }

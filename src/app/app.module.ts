@@ -22,13 +22,15 @@ import { UserComponent } from './user/user.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
+import { ImageViewerModule } from '../../imageviewer';
+import { IMAGEVIEWER_CONFIG, ImageViewerConfig } from '../../imageviewer';
 
 import { UserModule } from './user/user.module';
 import { BookModule } from './book/book.module';
 import { MediaModule } from './media/media.module';
 import { OrderModule } from './order/order.module';
 import { PageModule } from './page/page.module';
+import { IMAGEVIEWER_CONFIG_DEFAULT } from '../../imageviewer/imageviewer.config';
 
 
 // AoT requires an exported function for factories
@@ -47,7 +49,7 @@ export function createTranslateLoader(http: HttpClient) {
         BrowserAnimationsModule,
         AppRoutingModule,
         UserModule,
-        BookModule, 
+        BookModule,
         PageModule,
         OrderModule,
         MediaModule,
@@ -68,7 +70,13 @@ export function createTranslateLoader(http: HttpClient) {
         }),
         ImageViewerModule
     ],
-    providers: [ScriptLoaderService],
+    providers: [
+        ScriptLoaderService,
+    {
+      provide: IMAGEVIEWER_CONFIG,
+      useValue: IMAGEVIEWER_CONFIG_DEFAULT
+    }
+  ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

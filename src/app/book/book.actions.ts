@@ -3,84 +3,84 @@ import { Update } from '@ngrx/entity';
 import { Book } from './book.model';
 
 export enum BookActionTypes {
-  LoadBooks = '[Book] Load Books',
-  AddBook = '[Book] Add Book',
-  UpsertBook = '[Book] Upsert Book',
-  AddBooks = '[Book] Add Books',
-  UpsertBooks = '[Book] Upsert Books',
-  UpdateBook = '[Book] Update Book',
-  UpdateBooks = '[Book] Update Books',
-  DeleteBook = '[Book] Delete Book',
-  DeleteBooks = '[Book] Delete Books',
-  ClearBooks = '[Book] Clear Books'
+    LoadBooks = '[Book] Load Books',
+    AddBook = '[Book] Add Book',
+    UpsertBook = '[Book] Upsert Book',
+    AddBooks = '[Book] Add Books',
+    UpsertBooks = '[Book] Upsert Books',
+    UpdateBook = '[Book] Update Book',
+    UpdateBooks = '[Book] Update Books',
+    DeleteBook = '[Book] Delete Book',
+    DeleteBooks = '[Book] Delete Books',
+    ClearBooks = '[Book] Clear Books'
 }
 
 export class LoadBooks implements Action {
-  readonly type = BookActionTypes.LoadBooks;
+    readonly type = BookActionTypes.LoadBooks;
 
-  constructor(public payload: { books: Book[] }) {}
+    constructor(public payload: { books: Book[] }) { }
 }
 
 export class AddBook implements Action {
-  readonly type = BookActionTypes.AddBook;
+    readonly type = BookActionTypes.AddBook;
 
-  constructor(public payload: { book: Book }) {}
+    constructor(public payload: { book: Book }) { }
 }
 
 export class UpsertBook implements Action {
-  readonly type = BookActionTypes.UpsertBook;
+    readonly type = BookActionTypes.UpsertBook;
 
-  constructor(public payload: { book: Update<Book> }) {}
+    constructor(public payload: { book: Update<Book> }) { }
 }
 
 export class AddBooks implements Action {
-  readonly type = BookActionTypes.AddBooks;
+    readonly type = BookActionTypes.AddBooks;
 
-  constructor(public payload: { books: Book[] }) {}
+    constructor(public payload: { books: Book[] }) { }
 }
 
 export class UpsertBooks implements Action {
-  readonly type = BookActionTypes.UpsertBooks;
+    readonly type = BookActionTypes.UpsertBooks;
 
-  constructor(public payload: { books: Update<Book>[] }) {}
+    constructor(public payload: { books: Update<Book>[] }) { }
 }
 
 export class UpdateBook implements Action {
-  readonly type = BookActionTypes.UpdateBook;
+    readonly type = BookActionTypes.UpdateBook;
 
-  constructor(public payload: { book: Update<Book> }) {}
+    constructor(public payload: { book: Update<Book> }) { }
 }
 
 export class UpdateBooks implements Action {
-  readonly type = BookActionTypes.UpdateBooks;
+    readonly type = BookActionTypes.UpdateBooks;
 
-  constructor(public payload: { books: Update<Book>[] }) {}
+    constructor(public payload: { books: Update<Book>[] }) { }
 }
 
 export class DeleteBook implements Action {
-  readonly type = BookActionTypes.DeleteBook;
+    readonly type = BookActionTypes.DeleteBook;
 
-  constructor(public payload: { id: string }) {}
+    constructor(public payload: { id: string }) { }
 }
 
 export class DeleteBooks implements Action {
-  readonly type = BookActionTypes.DeleteBooks;
+    readonly type = BookActionTypes.DeleteBooks;
 
-  constructor(public payload: { ids: string[] }) {}
+    constructor(public payload: { ids: string[] }) { }
 }
 
 export class ClearBooks implements Action {
-  readonly type = BookActionTypes.ClearBooks;
+    readonly type = BookActionTypes.ClearBooks;
 }
 
 export type BookActions =
- LoadBooks
- | AddBook
- | UpsertBook
- | AddBooks
- | UpsertBooks
- | UpdateBook
- | UpdateBooks
- | DeleteBook
- | DeleteBooks
- | ClearBooks;
+    LoadBooks
+    | AddBook
+    | UpsertBook
+    | AddBooks
+    | UpsertBooks
+    | UpdateBook
+    | UpdateBooks
+    | DeleteBook
+    | DeleteBooks
+    | ClearBooks;
