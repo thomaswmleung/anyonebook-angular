@@ -9,7 +9,8 @@ import { JsonPipe } from '@angular/common';
 })
 export class UserComponent implements OnInit {
     param = {
-        imgUrl: 'http://www.pkmachinery.com/d/pic/faq20170324%E8%B5%B7/vibrating-feeder.jpg'
+        // imgUrl: 'http://www.pkmachinery.com/d/pic/faq20170324%E8%B5%B7/vibrating-feeder.jpg'
+        imgUrl: "https://www.cca.edu/sites/default/files/pdf/08/word-to-pdf.pdf"
     };
     constructor(public translate: TranslateService) {
         this.translate.onLangChange.subscribe((event: LangChangeEvent) => {

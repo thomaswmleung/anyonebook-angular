@@ -18,7 +18,7 @@ import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
         TranslateModule.forChild(),
         ImageViewerModule
     ],
-    exports: [UserComponent, TranslateModule,ImageViewerModule],
+    exports: [UserComponent, TranslateModule, ImageViewerModule],
     declarations: [UserComponent],
     entryComponents: [UserComponent],
 })

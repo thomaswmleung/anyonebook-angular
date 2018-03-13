@@ -11,6 +11,7 @@
         "assets",
         "favicon.ico",
         "i18n"
+        
       ],
       "index": "index.html",
       "main": "main.ts",

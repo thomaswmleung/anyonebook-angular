@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ThemeComponent } from './theme/theme.component';
 import { LayoutModule } from './theme/layouts/layout.module';
-import { UserModule } from './user/user.module';
+
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,7 +21,15 @@ import { UserComponent } from './user/user.component';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 import { ImageViewerModule } from '@hallysonh/ngx-imageviewer';
+
+import { UserModule } from './user/user.module';
+import { BookModule } from './book/book.module';
+import { MediaModule } from './media/media.module';
+import { OrderModule } from './order/order.module';
+import { PageModule } from './page/page.module';
+
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -39,6 +47,10 @@ export function createTranslateLoader(http: HttpClient) {
         BrowserAnimationsModule,
         AppRoutingModule,
         UserModule,
+        BookModule, 
+        PageModule,
+        OrderModule,
+        MediaModule,
 
         ThemeRoutingModule,
         AuthModule,
@@ -59,4 +71,7 @@ export function createTranslateLoader(http: HttpClient) {
     providers: [ScriptLoaderService],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}
