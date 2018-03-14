@@ -13,12 +13,18 @@ export class UserComponent implements OnInit {
         imgUrl: "https://hallysonh.github.io/ngx-imageviewer/pdf-test.pdf",
         docFile: File
     };
+
     constructor(public translate: TranslateService) {
         this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
             console.log('Language changed to ' + this.translate.currentLang);
         });
     }
+
     ngOnInit() {
+    }
+
+    uploadFile() {
+
     }
 
 }

@@ -12,7 +12,14 @@
 <!-- displaying input PDF file -->
 <div>
     <label>Resource File: </label>
-    <input id="param.docFile" name="param.docFile" (change)="param.docFile = $event.target.files[0]" type="file" accept="image/*,application/pdf" required>
+    <input
+        id="param.docFile"
+        name="param.docFile"
+        (change)="param.docFile = $event.target.files[0]"
+        type="file"
+        accept="image/*,application/pdf"
+        required>
+    <div class="btn" (click)="uploadFile()" >Upload</div>
 </div>
 <ngx-imageviewer *ngIf="param.docFile" [src]="param.docFile"></ngx-imageviewer>
 
