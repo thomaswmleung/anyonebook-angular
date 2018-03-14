@@ -10,7 +10,8 @@ import { JsonPipe } from '@angular/common';
 export class UserComponent implements OnInit {
     param = {
         // imgUrl: 'http://www.pkmachinery.com/d/pic/faq20170324%E8%B5%B7/vibrating-feeder.jpg'
-        imgUrl: "https://storage.googleapis.com/uploadedpages-bucket-180312/Mock100_6A/SC/PDF/Mock100_6A_10.pdf"
+        imgUrl: "https://hallysonh.github.io/ngx-imageviewer/pdf-test.pdf",
+        docFile: File
     };
     constructor(public translate: TranslateService) {
         this.translate.onLangChange.subscribe((event: LangChangeEvent) => {

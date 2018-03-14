@@ -8,5 +8,11 @@
     <p>2. {{translate.getLangs()|json}}</p>
     <p>4. {{translate.getBrowserLang()}}</p>
 </div>
-
+<!-- displaying input PDF file -->
+<div>
+    <label>Resource File: </label>
+    <input id="param.docFile" name="param.docFile" (change)="param.docFile = $event.target.files[0]" type="file" accept="image/*,application/pdf" required>
+</div>
+<ngx-imageviewer *ngIf="param.docFile" [src]="param.docFile"></ngx-imageviewer>
+<!-- displaying PDF file with URL provided -->
 <ngx-imageviewer [src]="param.imgUrl"></ngx-imageviewer>
