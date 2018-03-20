@@ -72,11 +72,11 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     providers: [
         ScriptLoaderService,
-    {
-      provide: IMAGEVIEWER_CONFIG,
-      useValue: IMAGEVIEWER_CONFIG_DEFAULT
-    }
-  ],
+        {
+            provide: IMAGEVIEWER_CONFIG,
+            useValue: IMAGEVIEWER_CONFIG_DEFAULT
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
